@@ -4,5 +4,7 @@ git+git://github.com/google/chatbase-python.git
 pyrogram[fast]
 Pillow
 hachoir
+PyDrive
+pyrogram
 numpy
 ffmpeg-python
