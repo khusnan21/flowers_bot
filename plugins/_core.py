@@ -39,12 +39,12 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.Filters.regex(pattern=".*http.*"))
 def echo(bot, update):
-    # logger.info(update)
+    logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/echo")
-    # bot.send_chat_action(
-    #     chat_id=update.chat.id,
-    #     action="typing"
-    # )
+    bot.send_chat_action(
+    chat_id=update.chat.id,
+     action="typing"
+    )
     logger.info(update.from_user)
     if str(update.from_user.id) in Config.BANNED_USERS:
         bot.send_message(
